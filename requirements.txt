@@ -18,6 +18,7 @@ django-users2==0.2.1
 easy-thumbnails==2.5
 html2text==2014.12.29
 meld3==1.0.2
+ConfigParser
 MySQL-python==1.2.5
 packaging==16.8
 Pillow==3.2.0

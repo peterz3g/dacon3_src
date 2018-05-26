@@ -17,13 +17,10 @@ django-users2==0.2.1
 easy-thumbnails==2.5
 html2text==2014.12.29
 meld3==1.0.2
-ConfigParser
 packaging==16.8
-Pillow==3.2.0
 psycopg2==2.7.3.2
 pyparsing==2.1.10
 six==1.10.0
-virtualenv==15.1.0
 tensorflow
 Keras
 fasttext

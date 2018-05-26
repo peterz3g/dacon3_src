@@ -33,6 +33,7 @@ apt-get install -y python3-dev python-lxml  && \
 apt-get install -y apt-utils && \
 chmod +x /dsrc/entrypoint.sh && \
 chmod 0600 /var/spool/cron/crontabs/root && \
+conda update -y -n base conda && \
 conda install -y -c conda-forge uwsgi && \
 pip install --upgrade pip && \
 pip install --upgrade setuptools && \

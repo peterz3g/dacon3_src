@@ -1,3 +1,5 @@
 PyMySQL
+cx_Oracle
 Django
 requests
+dwebsocket

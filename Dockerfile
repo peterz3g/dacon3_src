@@ -26,6 +26,7 @@ apt-get install -y vim && \
 apt-get install -y telnet && \
 apt-get install -y netstat && \
 apt-get install -y gcc && \
+apt-get install -y build-essential && \
 chmod +x /dsrc/entrypoint.sh && \
 chmod 0600 /var/spool/cron/crontabs/root && \
 pip install --upgrade pip && \

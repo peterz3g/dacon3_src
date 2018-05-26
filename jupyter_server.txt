@@ -1,0 +1,49 @@
+http://blog.csdn.net/kunlong0909/article/details/52464495
+
+
+$jupyter notebook --generate-config
+
+In [1]: from notebook.auth import passwd
+In [2]: passwd()
+Enter password:
+Verify password:
+Out[2]: 'sha1:ce23d945972f:34769685a7ccd3d08c84a18c63968a41f1140274'
+把生成的密文‘sha:ce…’复制下来
+
+
+
+4. 修改默认配置文件
+
+$vim ~/.jupyter/jupyter_notebook_config.py 
+进行如下修改：
+
+c.NotebookApp.ip='*'
+c.NotebookApp.password = u'sha:ce...刚才复制的那个密文'
+c.NotebookApp.open_browser = False
+c.NotebookApp.port =7001 #随便指定一个端口
+
+
+$jupyter notebook
+$nohup jupyter notebook --allow-root &
+
+
+5, 添加不同的python环境
+#http://blog.csdn.net/silence2015/article/details/73650665
+
+conda create -n py27 python=2.7
+root@rvp:/vol/rvp# conda info -e
+# conda environments:
+#
+py27                     /opt/conda/envs/py27
+root                  *  /opt/conda
+
+source activate py27
+
+python -m ipykernel install --user --name python27 --display-name python27
+
+jupyter kernelspec list
+jupyter kernelspec remove python2
+
+
+
+

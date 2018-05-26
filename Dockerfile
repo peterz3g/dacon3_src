@@ -40,6 +40,7 @@ echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>for conda  and pip libs" && \
 conda update -y -n base conda && \
 conda install -y Pillow && \
 conda install -y -c conda-forge uwsgi && \
+conda create -y -n py27 python=2.7 && \
 pip install --upgrade pip && \
 pip install --upgrade setuptools && \
 pip install -r /dsrc/requirements.txt && \

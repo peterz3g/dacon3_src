@@ -28,3 +28,4 @@ virtualenv==15.1.0
 tensorflow
 Keras
 fasttext
+gensim

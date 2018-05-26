@@ -31,6 +31,7 @@ chmod +x /dsrc/entrypoint.sh && \
 chmod 0600 /var/spool/cron/crontabs/root && \
 pip install --upgrade pip && \
 pip install --upgrade setuptools && \
+pip install --upgrade ConfigParser && \
 pip install -r /dsrc/requirements.txt && \
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 service cron restart && \

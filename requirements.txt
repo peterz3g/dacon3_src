@@ -3,7 +3,6 @@ cx_Oracle
 Django
 requests
 dwebsocket
-uWSGI
 gunicorn
 setuptools
 wheel

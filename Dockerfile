@@ -25,13 +25,16 @@ apt-get install -y cron && \
 apt-get install -y vim && \
 apt-get install -y telnet && \
 apt-get install -y net-tools && \
-apt-get install -y gcc && \
+apt-get install -y libaio1 && \
 apt-get install -y build-essential && \
+apt-get install -y libxml2-dev libxslt-dev python-dev && \
+apt-get install -y python3-dev python-lxml  && \
+apt-get install -y apt-utils && \
+conda install -y -c conda-forge uwsgi && \
 chmod +x /dsrc/entrypoint.sh && \
 chmod 0600 /var/spool/cron/crontabs/root && \
 pip install --upgrade pip && \
 pip install --upgrade setuptools && \
-pip install --upgrade ConfigParser && \
 pip install -r /dsrc/requirements.txt && \
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 service cron restart && \

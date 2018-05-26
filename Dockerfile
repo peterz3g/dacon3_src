@@ -22,21 +22,27 @@ COPY cron_jobs.txt /var/spool/cron/crontabs/root
 
 #pip install -r /dsrc/requirements.txt && \
 RUN apt-get update && \
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>for usfull tools" && \
 apt-get install -y cron && \
+apt-get install -y procps && \
 apt-get install -y vim && \
 apt-get install -y telnet && \
 apt-get install -y net-tools && \
-apt-get install -y libaio1 && \
+chmod +x /dsrc/entrypoint.sh && \
+chmod 0600 /var/spool/cron/crontabs/root && \
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>for dev libs" && \
 apt-get install -y build-essential && \
+apt-get install -y libaio1 && \
 apt-get install -y libxml2-dev libxslt-dev python-dev && \
 apt-get install -y python3-dev python-lxml  && \
 apt-get install -y apt-utils && \
-chmod +x /dsrc/entrypoint.sh && \
-chmod 0600 /var/spool/cron/crontabs/root && \
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>for conda  and pip libs" && \
 conda update -y -n base conda && \
 conda install -y -c conda-forge uwsgi && \
 pip install --upgrade pip && \
 pip install --upgrade setuptools && \
+pip install -r /dsrc/requirements.txt && \
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>for user configs" && \
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 service cron restart && \
 echo "#add by zhangyang"  >> /etc/profile && \

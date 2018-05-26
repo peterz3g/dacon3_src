@@ -20,6 +20,7 @@ COPY cron_jobs.txt /var/spool/cron/crontabs/root
 # conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 # conda config --set show_channel_urls yes
 
+#pip install -r /dsrc/requirements.txt && \
 RUN apt-get update && \
 apt-get install -y cron && \
 apt-get install -y vim && \
@@ -30,12 +31,11 @@ apt-get install -y build-essential && \
 apt-get install -y libxml2-dev libxslt-dev python-dev && \
 apt-get install -y python3-dev python-lxml  && \
 apt-get install -y apt-utils && \
-conda install -y -c conda-forge uwsgi && \
 chmod +x /dsrc/entrypoint.sh && \
 chmod 0600 /var/spool/cron/crontabs/root && \
+conda install -y -c conda-forge uwsgi && \
 pip install --upgrade pip && \
 pip install --upgrade setuptools && \
-pip install -r /dsrc/requirements.txt && \
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 service cron restart && \
 echo "#add by zhangyang"  >> /etc/profile && \

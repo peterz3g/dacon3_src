@@ -46,7 +46,6 @@ pip install --upgrade setuptools && \
 pip install -r /dsrc/requirements.txt && \
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>for user configs" && \
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-service cron restart && \
 echo "#add by zhangyang"  >> /etc/profile && \
 echo "export LANG=C.UTF-8"  >> /etc/profile && \
 mkdir /root/.jupyter && \

@@ -10,12 +10,12 @@ appdirs
 django-appconf
 django-ckeditor
 django-cors-headers
-django-guardian
+django-guardian==1.4.1
 django-model-utils
 django-userena
 django-users2
 easy-thumbnails
-html2text
+html2text==2014.12.29
 meld3
 ConfigParser
 packaging

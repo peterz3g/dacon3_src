@@ -28,3 +28,4 @@ Keras
 fasttext
 gensim
 pyLDAvis
+jieba
